@@ -1,4 +1,6 @@
 <article>
-  <h2 class="title">title</h2>
-  <button>Ver más</button>
+  <h2 class="title">{{ item().className }}</h2>
+  <a [routerLink]="['/booking', item().id]">
+    <button>Ver más</button>
+  </a>
 </article>

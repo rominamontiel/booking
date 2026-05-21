@@ -3,8 +3,24 @@
     <h1>🏋️ Reservas disponibles</h1>
   </nav>
   <div class="bookings">
-    @for (item of [1, 1, 1, 1, 1, 1, 1, 1]; track $index) {
-      <app-booking-item></app-booking-item>
+    @for (item of bookingList(); track item.id) {
+      <div class="item-container">
+        <app-booking-item [item]="item"></app-booking-item>
+      </div>
+    }
+    @if (isLoading()) {
+      Cargando....
+    }
+    @if (!isLoading() && bookingList().length === 0) {
+      No se encontraron resultados
     }
   </div>
 </section>
+
+@if (showError()) {
+  <app-alert [type]="TYPE_ERROR"></app-alert>
+}
+
+@if (isLoading()) {
+  <app-loading></app-loading>
+}

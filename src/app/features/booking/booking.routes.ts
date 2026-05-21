@@ -6,7 +6,7 @@ export const BOOKING_ROUTES: Routes = [
         loadComponent: () => import('./booking.component')
     },
     {
-        path: 'booking/:id',
+        path: ':id',
         loadComponent: () => import('./pages/booking-detail/booking-detail.component')
     }
     

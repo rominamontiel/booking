@@ -1,17 +1,18 @@
 section {
   height: 100vh;
-  background-color: gainsboro;
+  background-color: rgb(237 240 244);
 
   nav {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid gainsboro;
     height: 64px;
     display: flex;
     align-items: center;
     padding: 0 1rem;
     background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.096);
 
-    h1{
-        font-size: 1.3em;
+    h1 {
+      font-size: 1.3em;
     }
   }
 
@@ -24,7 +25,16 @@ section {
     gap: 2rem;
     overflow-y: auto;
 
-    .product-list {
+    .item-container {
+      display: block;
+      opacity: 0;
+      animation: fadeUp ease-in-out 0.3s forwards;
+
+      @for $i from 1 through 100 {
+        &:nth-child(#{$i}n) {
+          animation-delay: #{$i * 0.07}s;
+        }
+      }
     }
   }
 }

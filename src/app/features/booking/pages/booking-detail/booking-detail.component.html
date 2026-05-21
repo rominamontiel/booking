@@ -1,1 +1,27 @@
-<p>booking-detail works!</p>
+<section>
+  <div class="card">
+    <h1>{{ booking()?.className }}</h1>
+    <ul>
+      <li>Profesor: {{ booking()?.instructor }}</li>
+      <li>Horario: {{ booking()?.schedule }}</li>
+      <li>Cupos: {{ booking()?.availableSpots }}</li>
+    </ul>
+    <div class="buttons">
+      <button class="secondary" [routerLink]="'/booking'">Volver</button>
+      <button [disabled]="successReserved()" (click)="reserve()">
+        Reservar
+      </button>
+    </div>
+  </div>
+</section>
+@if (isLoading()) {
+  <app-loading></app-loading>
+}
+
+@if (successReserved()) {
+  <app-alert [type]="TYPE_SUCCESS"></app-alert>
+}
+
+@if (showError()) {
+  <app-alert [type]="TYPE_ERROR"></app-alert>
+}
