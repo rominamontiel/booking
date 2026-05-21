@@ -31,6 +31,6 @@ export default class BookingComponent {
         return of([]);
       }),
     ),
-    { initialValue: [] as BookingModel[] }, // Valor inicial mientras el Observable emite
+    { initialValue: [] },
   );
 }

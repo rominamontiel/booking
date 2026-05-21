@@ -1,7 +1,6 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BookingService } from '../../../../core/services/booking-service/booking.service';
-import { BookingModel } from '../../../../core/models/booking.interface';
 import { LoadingComponent } from '../../../../shared/ui/loading/loading.component';
 import { AlertComponent } from '../../../../shared/ui/alert/alert.component';
 import { toSignal } from '@angular/core/rxjs-interop';
