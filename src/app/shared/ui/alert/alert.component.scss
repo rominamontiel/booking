@@ -1,0 +1,37 @@
+.success-message {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+
+  padding: 12px 16px;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-top: 16px;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  animation: fadeUp ease-in-out 0.3s forwards;
+  opacity: 0;
+}
+
+.error-message {
+  background-color: #fad1d1;
+  color: #5f0606;
+  border: 1px solid #b91010;
+
+  padding: 12px 16px;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-top: 16px;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  animation: fadeUp ease-in-out 0.3s forwards;
+  opacity: 0;
+}
