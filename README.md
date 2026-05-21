@@ -65,3 +65,7 @@ Para integrar un backend real bastaría con reemplazar esas implementaciones por
 ## Ayuda
 
 Documentación de Angular CLI: `ng help` o [referencia de comandos](https://angular.dev/tools/cli).
+
+## Acotaciones
+
+Los test fueron subidos fuera de horario
